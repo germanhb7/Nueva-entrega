@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Raíz del documento con idioma español -->
+<head> <!-- Metadatos y configuración -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista adaptada a móviles -->
+    <meta name="description" content="Descubre las mejores películas, críticas y noticias del cine.">
+    <title>Cinema.com - Tu portal de películas</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="../pratica/css/styles.css"> <!-- Archivo CSS -->
+</head>
+<body> <!-- Contenido visible de la página -->
+
+    <header> <!-- Encabezado del sitio -->
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Cinema.com"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="destacadas/destacadas.html">Películas Destacadas</a></li>
+                <li><a href="criticas/criticas.html">Críticas</a></li>
+                <li><a href="actor/actores.html">Actores</a></li>
+                <li><a href="premios/premios.html">Premios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- Contenido principal -->
+        <section id="destacadas"> <!-- Películas destacadas -->
+            <h1>Películas Destacadas</h1>
+            <article class="pelicula">
+                <figure>
+                    <img src="pelicula1.jpg" alt="Poster de la película 1">
+                    <figcaption>Nombre de la película 1</figcaption>
+                </figure>
+                <p>Una breve descripción de la película...</p>
+                <a href="detalle-pelicula1.html" class="btn">Ver más</a>
+            </article>
+            <article class="pelicula">
+                <figure>
+                    <img src="pelicula2.jpg" alt="Poster de la película 2">
+                    <figcaption>Nombre de la película 2</figcaption>
+                </figure>
+                <p>Una breve descripción de la película...</p>
+                <a href="detalle-pelicula2.html" class="btn">Ver más</a>
+            </article>
+        </section>
+
+        <section id="criticas"> <!-- Críticas -->
+            <h2>Últimas Críticas</h2>
+            <article class="critica">
+                <h3>Crítica: Nombre de la película 1</h3>
+                <p>Resumen de la crítica...</p>
+                <a href="critica-pelicula1.html" class="btn">Leer más</a>
+            </article>
+            <article class="critica">
+                <h3>Crítica: Nombre de la película 2</h3>
+                <p>Resumen de la crítica...</p>
+                <a href="critica-pelicula2.html" class="btn">Leer más</a>
+            </article>
+        </section>
+
+        <section id="actores"> <!-- Actores destacados -->
+            <h2>Actores Destacados</h2>
+            <article class="actor">
+                <img src="actor1.jpg" alt="Foto del actor 1">
+                <h3>Nombre del actor 1</h3>
+                <p>Biografía breve del actor...</p>
+            </article>
+            <article class="actor">
+                <img src="actor2.jpg" alt="Foto del actor 2">
+                <h3>Nombre del actor 2</h3>
+                <p>Biografía breve del actor...</p>
+            </article>
+        </section>
+    </main>
+
+    <footer> <!-- Pie de página -->
+        <p>&copy; 2025 Cinema.com. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="politicas.html">Políticas de Privacidad</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- Archivo JavaScript -->
+</body>
+</html>
