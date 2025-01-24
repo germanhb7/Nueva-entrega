@@ -1,227 +1,233 @@
-/* Estilo global */
-body {
-    font-family: Arial, sans-serif; /* Fuente principal */
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el padding por defecto */
-    color: #fff; /* Color del texto */
-    background-color: #1a1a1a; /* Fondo oscuro */
-    line-height: 1.6; /* Altura de línea para facilitar la lectura */
+/* Reinicio de estilos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #f0a500; /* Color dorado para los enlaces */
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
-a:hover {
-    color: #ff4500; /* Color cuando el enlace es hover */
+/* Elimina decoraciones y ajustes predeterminados */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
-    color: #f0a500; /* Color dorado para los títulos */
-    margin-bottom: 10px; /* Espacio debajo de los títulos */
+ul, ol {
+    list-style: none;
 }
 
 img {
-    max-width: 100%; /* Las imágenes no exceden el 100% de su contenedor */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+}
+
+a {
+    color: #f0a500;
+}
+
+a:hover {
+    color: #ff4500;
+}
+
+h1, h2, h3 {
+    color: #f0a500;
+    margin-bottom: 10px;
 }
 
 /* Encabezado */
 header {
-    background-color: #000; /* Fondo negro */
-    padding: 10px 20px; /* Espaciado alrededor del header */
-    display: flex; /* Usamos flexbox para organizar los elementos */
-    justify-content: space-between; /* Espaciado entre los elementos */
-    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo img {
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 150px;
 }
 
 nav ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    display: flex; /* Flexbox para organizar los enlaces en fila */
-    gap: 20px; /* Espaciado entre los enlaces */
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
-    font-size: 16px; /* Tamaño de fuente para los enlaces */
-    font-weight: bold; /* Enlaces en negrita */
-    padding: 5px 10px; /* Espaciado alrededor de los enlaces */
-    transition: background-color 0.3s, color 0.3s; /* Animación al pasar el mouse */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #f0a500; /* Fondo dorado al pasar el mouse */
-    color: #000; /* Color negro al pasar el mouse */
-    border-radius: 5px; /* Bordes redondeados al hacer hover */
+    background-color: #f0a500;
+    color: #000;
+    border-radius: 5px;
 }
 
 /* Contenido principal */
 main {
-    padding: 20px; /* Espaciado alrededor del contenido principal */
+    padding: 20px;
 }
 
 section {
-    margin-bottom: 40px; /* Espaciado entre las secciones */
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-article {
-    background-color: #222; /* Fondo gris oscuro */
-    border: 1px solid #333; /* Borde gris */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado dentro de los artículos */
-    margin-bottom: 20px; /* Espaciado debajo de cada artículo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+section#descripcion,
+section#registro,
+section#contacto {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-article:hover {
-    border-color: #f0a500; /* Borde dorado al hacer hover */
-    box-shadow: 0 6px 12px rgba(240, 165, 0, 0.4); /* Sombra más intensa al hacer hover */
+/* Formulario de registro */
+form {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-article a.btn {
-    display: inline-block; /* Hace que el botón sea un bloque en línea */
-    background-color: #f0a500; /* Fondo dorado */
-    color: #000; /* Texto negro */
-    padding: 10px 15px; /* Espaciado dentro del botón */
-    border-radius: 5px; /* Bordes redondeados en el botón */
-    transition: background-color 0.3s, color 0.3s; /* Animación al pasar el mouse */
+form .form-control {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-article a.btn:hover {
-    background-color: #ff4500; /* Fondo naranja al hacer hover */
-    color: #fff; /* Texto blanco al hacer hover */
+form .form-control:focus {
+    border-color: #f0a500;
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
 }
 
-/* Sección de actores */
-article.actor {
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben */
-    gap: 15px; /* Espaciado entre los elementos */
-    align-items: center; /* Alineación vertical de los elementos */
+form button {
+    background-color: #f0a500;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-article.actor img {
-    width: 120px; /* Tamaño de las imágenes de los actores */
-    height: 120px; /* Asegura que las imágenes tengan la misma altura */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
-}
-
-article.actor .text {
-    max-width: calc(100% - 130px); /* El texto ocupa el ancho restante */
-    font-size: 16px; /* Tamaño de fuente para el texto */
-    line-height: 1.4; /* Mejora la legibilidad del texto */
+form button:hover {
+    background-color: #ff4500;
+    color: #fff;
 }
 
 /* Pie de página */
 footer {
-    background-color: #111; /* Fondo oscuro */
-    color: #f0a500; /* Texto dorado */
-    text-align: center; /* Centra el texto */
-    padding: 10px 20px; /* Espaciado dentro del pie de página */
-    margin-top: 20px; /* Espaciado superior */
+    background-color: #111;
+    color: #f0a500;
+    text-align: center;
+    padding: 10px 20px;
 }
 
 footer nav ul {
-    display: flex; /* Flexbox para organizar los enlaces */
-    justify-content: center; /* Centra los enlaces horizontalmente */
-    list-style: none; /* Elimina los puntos de la lista */
-    gap: 15px; /* Espaciado entre los enlaces */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 footer nav ul li a {
-    color: #f0a500; /* Color dorado para los enlaces */
-    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-size: 14px;
 }
 
 footer nav ul li a:hover {
-    color: #ff4500; /* Color naranja al pasar el mouse */
+    color: #ff4500;
 }
 
 /* Responsividad */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Muestra los enlaces en columna en pantallas pequeñas */
-        align-items: center; /* Centra los enlaces */
-        gap: 10px; /* Espaciado reducido entre los enlaces */
-    }
-
-    article.actor {
-        flex-direction: column; /* Los actores (imagen y texto) estarán en columna */
-        align-items: center; /* Centra los elementos dentro de cada actor */
-        gap: 15px; /* Espaciado entre imagen y texto */
-    }
-
-    article.actor img {
-        width: 80%; /* Las imágenes ocupan el 80% del ancho en dispositivos móviles */
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
-
-    article.actor .text {
-        width: 100%; /* El texto ocupa el 100% del ancho disponible */
-        font-size: 14px; /* Ajuste en tamaño de texto en móvil */
-        text-align: justify; /* Alinea el texto de manera justificada */
-        line-height: 1.5; /* Mejora la legibilidad del texto */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     header {
-        flex-direction: column; /* Coloca los elementos del header en columna */
-        align-items: center; /* Centra los elementos del header */
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
     }
 }
 
-/* Estilos personalizados para botones */
-.btn-custom {
-    background-color: #ffd700; /* Color dorado */
-    border-color: #ffd700; /* Borde dorado */
-}
-
-.btn-custom:hover {
-    background-color: #e6b800; /* Dorado más oscuro al hacer hover */
-    border-color: #e6b800; /* Borde dorado más oscuro al hacer hover */
-}
-
-.btn-custom:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.5); /* Resalta al enfocarse */
-}
-
-/* Estilo global para las imágenes en la galería */
-.gallery__item {
-    margin-bottom: 1rem; /* Espaciado debajo de cada imagen */
-}
-
-.gallery__image {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Media Queries */
-
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 767px) {
-    .gallery .row {
-        display: block; /* Cambia la visualización a bloque para una sola columna */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px;
     }
-    .gallery .col-md-4 {
-        width: 100%; /* Las imágenes ocuparán el 100% del ancho */
-        margin-bottom: 1rem; /* Espaciado debajo de cada imagen */
-    }
-}
 
-/* Para pantallas medianas (tabletas) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .gallery .col-md-4 {
-        width: 33.33%; /* Tres imágenes por fila */
+    form {
+        width: 100%;
     }
-}
 
-/* Para pantallas grandes (escritorio) */
-@media (min-width: 1025px) {
-    .gallery .col-md-4 {
-        width: 33.33%; /* Tres imágenes por fila */
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    footer nav ul {
+        gap: 10px;
     }
 }

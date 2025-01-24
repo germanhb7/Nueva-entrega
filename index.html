@@ -1,90 +1,93 @@
-<!DOCTYPE html> <!-- Documento HTML5 -->
-<html lang="es"> <!-- Raíz del documento con idioma español -->
-<head> <!-- Metadatos y configuración -->
-    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista adaptada a móviles -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre las mejores películas, críticas y noticias del cine.">
-    <title>Cinema.com - Tu portal de películas</title> <!-- Título de la página -->
-    <link rel="stylesheet" href="../pratica/css/styles.css"> <!-- Archivo CSS -->
+    <title>Cinema.com - Tu portal de películas</title>
+    <link rel="stylesheet" href="./css/styles.css"> <!-- Tu archivo CSS -->
 </head>
-<body> <!-- Contenido visible de la página -->
+<body>
 
-    <header> <!-- Encabezado del sitio -->
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="Cinema.com"></a>
+    <header>
+        <div class="logo text-center my-4">
+            <a href="index.html"><img src="../pratica-git/imagenes/logo-uno.jfif" alt="Cinema.com" class="img-fluid"></a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="destacadas/destacadas.html">Películas Destacadas</a></li>
-                <li><a href="criticas/criticas.html">Críticas</a></li>
-                <li><a href="actor/actores.html">Actores</a></li>
-                <li><a href="premios/premios.html">Premios</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="destacadas/destacadas.html">Películas Destacadas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="criticas/criticas.html">Críticas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="actor/actores.html">Actores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="premios/premios.html">Premios</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main> <!-- Contenido principal -->
-        <section id="destacadas"> <!-- Películas destacadas -->
-            <h1>Películas Destacadas</h1>
-            <article class="pelicula">
-                <figure>
-                    <img src="pelicula1.jpg" alt="Poster de la película 1">
-                    <figcaption>Nombre de la película 1</figcaption>
-                </figure>
-                <p>Una breve descripción de la película...</p>
-                <a href="detalle-pelicula1.html" class="btn">Ver más</a>
-            </article>
-            <article class="pelicula">
-                <figure>
-                    <img src="pelicula2.jpg" alt="Poster de la película 2">
-                    <figcaption>Nombre de la película 2</figcaption>
-                </figure>
-                <p>Una breve descripción de la película...</p>
-                <a href="detalle-pelicula2.html" class="btn">Ver más</a>
-            </article>
+    <main class="container my-5">
+        <section id="descripcion" class="text-center my-5">
+            <h1 class="display-4">Bienvenido a Cinema.com</h1>
+            <p class="lead">Tu portal definitivo para descubrir las mejores películas, críticas y noticias del cine. ¡Únete a nuestra comunidad y comparte tu pasión por el séptimo arte!</p>
         </section>
 
-        <section id="criticas"> <!-- Críticas -->
-            <h2>Últimas Críticas</h2>
-            <article class="critica">
-                <h3>Crítica: Nombre de la película 1</h3>
-                <p>Resumen de la crítica...</p>
-                <a href="critica-pelicula1.html" class="btn">Leer más</a>
-            </article>
-            <article class="critica">
-                <h3>Crítica: Nombre de la película 2</h3>
-                <p>Resumen de la crítica...</p>
-                <a href="critica-pelicula2.html" class="btn">Leer más</a>
-            </article>
+        <section id="registro" class="my-5">
+            <h2 class="text-center mb-4">Regístrate y sé parte de nuestra comunidad</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control form-control-custom" id="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="col-md-6">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control form-control-custom" id="correo" placeholder="Ingresa tu correo">
+                </div>
+                <div class="col-md-12">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control form-control-custom" id="contrasena" placeholder="Crea una contraseña">
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-custom">Registrarse</button>
+                </div>
+            </form>
         </section>
 
-        <section id="actores"> <!-- Actores destacados -->
-            <h2>Actores Destacados</h2>
-            <article class="actor">
-                <img src="actor1.jpg" alt="Foto del actor 1">
-                <h3>Nombre del actor 1</h3>
-                <p>Biografía breve del actor...</p>
-            </article>
-            <article class="actor">
-                <img src="actor2.jpg" alt="Foto del actor 2">
-                <h3>Nombre del actor 2</h3>
-                <p>Biografía breve del actor...</p>
-            </article>
+        <section id="contacto" class="my-5">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <p class="text-center">¿Tienes dudas o sugerencias? Escríbenos a nuestro correo: <a href="mailto:contacto@cinema.com">contacto@cinema.com</a></p>
+            <p class="text-center">O llámanos al: <strong>+54 123 456 789</strong></p>
         </section>
+
+        <section id="comunidad" class="text-center my-5">
+            <h2 class="mb-4">¡Únete a nuestra comunidad!</h2>
+            <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias del cine:</p>
+            <div>
+                <a href="https://facebook.com/cinema" class="btn btn-primary mx-2">Facebook</a>
+                <a href="https://twitter.com/cinema" class="btn btn-info mx-2">Twitter</a>
+                <a href="https://instagram.com/cinema" class="btn btn-danger mx-2">Instagram</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer> <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Cinema.com. Todos los derechos reservados.</p>
         <nav>
-            <ul>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="politicas.html">Políticas de Privacidad</a></li>
-                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <ul class="list-unstyled d-inline-flex">
+                <li class="mx-3"><a class="text-white" href="contacto.html">Contacto</a></li>
+                <li class="mx-3"><a class="text-white" href="politicas.html">Políticas de Privacidad</a></li>
+                <li class="mx-3"><a class="text-white" href="faq.html">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
     </footer>
 
-    <script src="scripts.js"></script> <!-- Archivo JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
