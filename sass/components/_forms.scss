@@ -1,0 +1,69 @@
+// Estilos para el formulario principal
+form {
+  max-width: 600px;
+  margin: 0 auto;
+
+  // Estilos para los controles del formulario
+  .form-control {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #fff;
+
+    // Estilos cuando el campo de formulario está en foco
+    &:focus {
+      border-color: #f0a500;
+      box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
+    }
+  }
+
+  // Estilos para el botón dentro del formulario
+  button {
+    @extend button; // Usa los estilos del archivo _buttons.scss
+  }
+}
+
+// Estilos para el formulario de comentarios
+.comentarios__form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  // Estilos para el título del formulario de comentarios
+  .comentarios__title {
+    color: #f0a500;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}
+
+// Estilos para el área de texto de los comentarios
+.comentarios__textarea {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Estilos cuando el área de texto está en foco
+  &:focus {
+    border-color: #f0a500;
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
+  }
+}
+
+// Estilos del botón en _buttons.scss
+// Se usa para el botón en los formularios
+.btn {
+  background-color: $color-dorado;
+  border: none;
+  padding: 10px 20px;
+  color: $color-negro;
+}

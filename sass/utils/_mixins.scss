@@ -1,0 +1,19 @@
+// Mixin para aplicar transiciones con propiedades personalizables
+@mixin transition($property: all, $time: 0.3s) {
+  transition: $property $time;
+}
+
+// Mixin para centrar elementos con Flexbox, permite configurar la dirección y el alineamiento
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin para aplicar border-radius con compatibilidad para navegadores antiguos
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

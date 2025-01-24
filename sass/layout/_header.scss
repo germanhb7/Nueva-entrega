@@ -1,0 +1,56 @@
+/* Estilos para el encabezado */
+header {
+  background-color: #333;  // Fondo oscuro para el encabezado
+  padding: 40px 20px;  // Espacio alrededor del encabezado
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  .logo img {
+    width: 150px;  // Tamaño de la imagen del logo
+  }
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+    
+    li a {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: background-color 0.3s, color 0.3s;
+      
+      &:hover {
+        background-color: #f0a500;  // Color dorado al pasar el mouse
+        color: #000;  // Color de texto negro al pasar el mouse
+        border-radius: 5px;  // Bordes redondeados al pasar el mouse
+      }
+    }
+  }
+}
+
+/* Estilos para el título en el encabezado */
+.header__title {
+  color: #f0a500;  // Color dorado para resaltar
+  font-size: 3rem;  // Tamaño de fuente grande
+  font-weight: bold;  // Negrita para más énfasis
+  text-align: center;  // Centrado en el contenedor
+  margin-bottom: 20px;  // Espacio debajo del título
+}
+
+/* Estilos para el subtítulo */
+.header__subtitle {
+  color: #555;  // Color gris oscuro
+  font-size: 1.25rem;  // Tamaño de fuente para el subtítulo
+}
+// sass/layout/_header.scss
+header {
+  background-color: $color-negro;
+  padding: 10px 20px;
+}
+
+.header__title {
+  color: $color-dorado;
+  font-size: 2.5rem;
+}

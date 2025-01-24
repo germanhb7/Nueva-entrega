@@ -1,0 +1,22 @@
+/* Estilos para el pie de página */
+footer {
+  background-color: $color-negro;  // Fondo oscuro para el pie de página
+  color: $color-dorado;  // Color dorado para el texto
+  text-align: center;
+  padding: 10px 20px;
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    li a {
+      font-size: 14px;
+      color: inherit;  // Se asegura que el color del enlace herede el color del texto del pie de página
+
+      &:hover {
+        color: #ff4500;  // Color al pasar el mouse
+      }
+    }
+  }
+}

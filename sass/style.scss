@@ -1,0 +1,14 @@
+// Importa las variables, mixins, reset y demás archivos
+@import "utils/variables";
+@import "utils/mixins";
+@import "base/reset";
+@import "base/typography";
+
+// Estructura (layout)
+@import "layout/header";
+@import "layout/footer";
+
+// Componentes
+@import "components/buttons";
+@import "components/forms";
+@import "components/sections";

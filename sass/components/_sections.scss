@@ -1,0 +1,16 @@
+// Estilos generales para las secciones
+section {
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+// Estilos específicos para las secciones con ID #descripcion, #registro y #contacto
+section#descripcion,
+section#registro,
+section#contacto {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
