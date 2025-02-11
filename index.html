@@ -5,7 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre las mejores películas, críticas y noticias del cine.">
     <title>Cinema.com - Tu portal de películas</title> <!-- Título de la página -->
-    <link rel="stylesheet" href="css/styles.css">> <!-- Archivo CSS -->
+    
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos para el chatbot */
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Inicialmente oculto */
+            z-index: 1000;
+        }
+        #chatbot-header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        #chatbot-header h5 {
+            margin: 0;
+        }
+        #chatbot-body {
+            padding: 10px;
+            overflow-y: auto;
+            height: calc(100% - 60px);
+        }
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            color: #333; /* Color del texto */
+            font-size: 14px; /* Tamaño del texto */
+        }
+        .close-chatbot {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #fff;
+        }
+        /* Aseguramos que el mensaje de bienvenida sea visible y no seleccionable */
+        #chatbot-messages {
+            max-height: 300px; /* Ajusta para que los mensajes se vean bien */
+            overflow-y: auto;
+            padding: 10px;
+        }
+        #chatbot-messages .chat-message:first-child {
+            font-weight: bold; /* Hacer que el mensaje de bienvenida resalte */
+            color: #000; /* Cambiar el color a negro */
+        }
+    </style>
 </head>
 <body>
 
@@ -40,28 +103,32 @@
 
         <section id="registro" class="my-5">
             <h2 class="text-center mb-4">Regístrate y sé parte de nuestra comunidad</h2>
-            <form class="row g-3">
+            <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control form-control-custom" id="nombre" placeholder="Ingresa tu nombre">
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-custom" id="nombre" placeholder="Ingresa tu nombre"> 
+                        </div>
+                        <div class="col-md-12">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control form-control-custom" id="correo" placeholder="Ingresa tu correo">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control form-control-custom" id="contrasena" placeholder="Crea una contraseña">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-custom">Registrarse</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                    <label for="correo" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control form-control-custom" id="correo" placeholder="Ingresa tu correo">
-                </div>
-                <div class="col-md-12">
-                    <label for="contrasena" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control form-control-custom" id="contrasena" placeholder="Crea una contraseña">
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-custom">Registrarse</button>
-                </div>
-            </form>
+            </div>
         </section>
 
         <section id="contacto" class="my-5">
             <h2 class="text-center mb-4">Contáctanos</h2>
-            <p class="text-center">¿Tienes dudas o sugerencias? Escríbenos a nuestro correo: <a href="mailto:contacto@cinema.com">contacto@cinema.com</a></p>
+            <p class="text-center">¿Tienes dudas o sugerencias? Escríbenos a nuestro correo: <a href="mailto:contacto@cinema.com" target="_blank">contacto@cinema.com</a></p>
             <p class="text-center">O llámanos al: <strong>+54 123 456 789</strong></p>
         </section>
 
@@ -69,25 +136,52 @@
             <h2 class="mb-4">¡Únete a nuestra comunidad!</h2>
             <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias del cine:</p>
             <div>
-                <a href="https://facebook.com/cinema" class="btn btn-primary mx-2">Facebook</a>
-                <a href="https://twitter.com/cinema" class="btn btn-info mx-2">Twitter</a>
-                <a href="https://instagram.com/cinema" class="btn btn-danger mx-2">Instagram</a>
+                <a href="https://facebook.com/cinema" class="btn btn-primary mx-2" target="_blank">Facebook</a>
+                <a href="https://twitter.com/cinema" class="btn btn-info mx-2" target="_blank">Twitter</a>
+                <a href="https://instagram.com/cinema" class="btn btn-danger mx-2" target="_blank">Instagram</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-center py-3">
         <p>&copy; 2025 Cinema.com. Todos los derechos reservados.</p>
         <nav>
             <ul class="list-unstyled d-inline-flex">
-                <li class="mx-3"><a class="text-white" href="contacto.html">Contacto</a></li>
-                <li class="mx-3"><a class="text-white" href="politicas.html">Políticas de Privacidad</a></li>
-                <li class="mx-3"><a class="text-white" href="faq.html">Preguntas Frecuentes</a></li>
+                <li class="mx-3"><a href="mailto:contacto@cinema.com" class="text-white" target="_blank">Contacto</a></li>
+                <li class="mx-3"><a href="politicas.html" class="text-white" target="_blank">Políticas de Privacidad</a></li>
+                <li class="mx-3"><a href="javascript:void(0);" class="text-white" onclick="openChatbot()">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
     </footer>
 
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div id="chatbot-header">
+            <h5>Chatbot</h5>
+            <span class="close-chatbot" onclick="closeChatbot()">&times;</span>
+        </div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages">
+                <div class="chat-message">¡Hola! ¿En qué puedo ayudarte? Escribe tu pregunta sobre el cine.</div>
+            </div>
+            <input type="text" id="chatbot-input" class="form-control" placeholder="Escribe tu mensaje...">
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para abrir el chatbot
+        function openChatbot() {
+            var chatbot = document.getElementById('chatbot');
+            chatbot.style.display = 'block';
+        }
+
+        // Función para cerrar el chatbot
+        function closeChatbot() {
+            var chatbot = document.getElementById('chatbot');
+            chatbot.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
